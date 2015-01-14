@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WEB制作「鳩屋」</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="和田隼人のポートフォリオサイトです。Web制作、ロゴ制作承ります。">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/ini.css" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/old.css">
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/processing.js"></script>
+	<script type="text/javascript" src="js/holder.js"></script>
+	<script type="text/JavaScript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/JavaScript" src="js/main.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-53477209-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<canvas id="backCanvas"></canvas>
+	</div>
+
+	<div id="menu-left">
+		<ul>
+			<li><a href="#profile">Profile</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#works">Works</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</div>
+
+	<div id="menu-right">
+		<ul>
+			<li><a href="https://twitter.com/CheeseHayato">Twitter</a></li>
+			<li><a href="https://www.facebook.com/hayato.wada.79">Facebook</a></li>
+		</ul>
+	</div>
+
+	<div id="title">
+		<h1>
+			<img src="/img/logo.png" height="400" alt="鳩屋">
+		</h1>
+	</div>
+
+	<div id="content">
+		<div id="content-left">
+			<div id="profile" class="space">
+				<h2>Profile</h2>
+				<p class="pspace">
+					Name: Wada Hayato<br />
+					Birth: 1993/9/16<br />
+					Age: 20<br />
+					School: Nihon Uni.<br />
+					GitHub: <a href="https://github.com/hatoya">Hatoya</a>
+				</p>
+			</div>
+
+			<div id="works">
+				<h2>Works</h2>
+				<table border="0" width="464">
+						<tr>
+							<td colspan="2" id="itsonBox">
+								<div id="itsonDetail">
+									<img src="img/itson.png" height="270" width="213" alt="ダミー">
+									<p>
+										Project: It's on!<br>
+										Release: 2014/4/1<br>
+										URL: <a href="http://its-on.jp.net/" target="_blank">its-on.jp.net</a>
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr height="155">
+							<td align="center" id="itson">
+								<img src="img/itson-thumbnail.png" height="135" width="222" alt="ダミー">
+							</td>
+							<td align="center" id="log">
+								<img src="img/pigeon-thumbnail.png" height="135" width="222" alt="ダミー">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" id="logBox">
+								<div id="logDetail">
+									<img src="img/pigeon.png" height="270" width="213" alt="pigeon">
+									<p>
+										Project: Logo Design<br>
+										Release: 2014/5/1
+									</p>
+								</div>
+							</td>
+						</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="content-right">
+			<div id="skills" class="space">
+				<h2>Skills</h2>
+				<p class="pspace">
+					HTML5<br />
+					CSS3<br>
+					JavaScript<br>
+					jQuery<br>
+					Sass<br>
+					Stylus<br>
+					Node.js<br>
+					Grunt<br>
+					Gulp<br>
+					PHP<br>
+					C,C++<br>
+					Processing<br>
+					Illustrator<br>
+					Photoshop
+				</p>
+			</div>
+
+			<div id="contact" class="space">
+				<h2>Contact</h2>
+				<p class="pspace">
+					<a href="mailto:hatoya.web.design@gmail.com">Send a mail.</a>
+				</p>
+			</div>
+		</div>
+
+		<div id="footer">
+			Copyright © 2014 WadaHayato
+		</div>
+	</div>
+
+<script id="processing-code" type="application/processing">
+	int num = 10, i;
+	drawTriangle[] triangular = new drawTriangle[num];
+
+	void setup(){
+		size(innerWidth, innerHeight);
+		frameRate(60);
+		background(255);
+		smooth();
+
+		for( i = 0; i < num; i++){
+			triangular[i] = new drawTriangle();
+		}
+	}
+
+	void draw(){
+		size(innerWidth, innerHeight);
+		background(255);
+
+		for( i = 0; i < num; i++){
+			triangular[i].move();
+			triangular[i].display();
+		}
+	}
+
+	class drawTriangle{
+		float x1, y1, x2, y2, x3, y3;
+		int size;
+		float dx1, dy1, dx2, dy2, dx3, dy3;
+		float slow = 0.15;
+
+		drawTriangle(){
+			x1 = random(innerWidth/7,innerWidth*6/7);
+			y1 = random(innerHeight/7,innerHeight*6/7);
+			x2 = random(innerWidth/7,innerWidth*6/7);
+			y2 = random(innerHeight/7,innerHeight*6/7);
+			x3 = random(innerWidth/7,innerWidth*6/7);
+			y3 = random(innerHeight/7,innerHeight*6/7);
+			dx1 = random(-10, 10) * slow;
+			dy1 = random(-10, 10) * slow;
+			dx2 = random(-10, 10) * slow;
+			dy2 = random(-10, 10) * slow;
+			dx3 = random(-10, 10) * slow;
+			dy3 = random(-10, 10) * slow;
+		}
+
+		void display(){
+			noStroke();
+			fill(244, 127, 108,150);
+			triangle(x1, y1, x2, y2, x3, y3);
+		}
+
+		void move(){
+			if (x1 >= width || x1 <= 0){
+				dx1 *= -1;
+			}
+			if (y1 >= height || y1 <= 0){
+				dy1 *= -1;
+			}
+
+			if (x2 >= width || x2 <= 0){
+				dx2 *= -1;
+			}
+			if (y2 >= height || y2 <= 0){
+				dy2 *= -1;
+			}
+
+			if (x3 >= width || x3 <= 0){
+				dx3 *= -1;
+			}
+			if (y3 >= height || y3 <= 0){
+				dy3 *= -1;
+			}
+
+			x1 += dx1;
+			y1 += dy1;
+			x2 += dx2;
+			y2 += dy2;
+			x3 += dx3;
+			y3 += dy3;
+		}
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'web-silom';
+    src: url(./silom.ttf);
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body , div , dl , dt , dd , ul , ol , li , h1 , h2 , h3 , h4 , h5 , h6 , pre , form , fieldset , input , textarea , p , blockquote , th , td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    color: #333;
+    font-family: "web-silom", "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a{
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+::selection{
+    background: rgba(0, 0, 0, 0);
+}
