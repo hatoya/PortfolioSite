@@ -11,8 +11,8 @@ section.menuContent {
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
         &.menuLeft {
-            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
             @include positionType(fixed);
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -90px;
@@ -21,8 +21,8 @@ section.menuContent {
             }
         }
         &.menuRight {
-            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
             @include positionType(fixed, 0, 1110px);
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -67px;

@@ -54,10 +54,10 @@ section.menuContent div {
   background: rgba(0, 0, 0, 0.6);
 }
 section.menuContent div.menuLeft {
-  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 section.menuContent div.menuLeft ul {
   position: relative;
@@ -68,10 +68,10 @@ section.menuContent div.menuLeft ul {
   padding-right: 5px;
 }
 section.menuContent div.menuRight {
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 1110px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 }
 section.menuContent div.menuRight ul {
   position: relative;
