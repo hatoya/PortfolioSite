@@ -18,6 +18,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 body {
   height: 100%;
   width: 100%;
+  color: #333;
   font-family: "web-silom", "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
 }
 
@@ -27,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: black;
+  color: #333;
 }
 
 ul {
@@ -55,20 +56,28 @@ section.menuContent div {
 section.menuContent div.menuLeft {
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 section.menuContent div.menuLeft ul {
+  position: relative;
+  top: 50%;
+  left: 0;
+  margin-top: -90px;
   text-align: right;
   padding-right: 5px;
 }
 section.menuContent div.menuRight {
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 1110px;
 }
 section.menuContent div.menuRight ul {
+  position: relative;
+  top: 50%;
+  left: 0;
+  margin-top: -67px;
   padding-left: 2px;
 }
 
@@ -100,6 +109,10 @@ section.mainContent div.content .contentRight {
 }
 section.mainContent div.content div {
   margin-top: 50px;
+}
+section.mainContent div.content div ul,
+section.mainContent div.content div p {
+  margin-left: 20px;
 }
 section.mainContent div.footer {
   margin-top: 100px;

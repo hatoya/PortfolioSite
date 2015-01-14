@@ -14,14 +14,18 @@ section.menuContent {
             box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
             @include positionType(fixed);
             ul {
+                @include positionType(relative, 50%);
+                margin-top: -90px;
                 text-align: right;
                 padding-right: 5px;
             }
         }
         &.menuRight {
             box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
-            @include positionType(fixed, 0, 1110);
+            @include positionType(fixed, 0, 1110px);
             ul {
+                @include positionType(relative, 50%);
+                margin-top: -67px;
                 padding-left: 2px;
             }
         }
@@ -49,6 +53,10 @@ section.mainContent {
         }
         div {
             margin-top: 50px;
+            ul,
+            p {
+                margin-left: 20px;
+            }
         }
     }
     div.footer {
