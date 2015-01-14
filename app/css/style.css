@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'web-silom';
+  src: url(./silom.ttf);
+}
 html {
   height: 100%;
   width: 100%;
@@ -14,7 +18,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 body {
   height: 100%;
   width: 100%;
-  font-family: "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+  font-family: "web-silom", "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,18 +39,60 @@ ul {
 }
 
 section.menuContent {
+  font-size: 35px;
+  letter-spacing: -0.05em;
+}
+section.menuContent a {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+section.menuContent div {
+  width: 170px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+section.menuContent div.menuLeft {
   position: fixed;
+  top: 0px;
+  left: 0px;
+}
+section.menuContent div.menuLeft ul {
+  text-align: right;
+  padding-right: 5px;
+}
+section.menuContent div.menuRight {
+  position: fixed;
+  top: 0px;
+  left: 1110px;
+}
+section.menuContent div.menuRight ul {
+  padding-left: 2px;
 }
 
 section.mainContent {
   width: 940px;
   margin: 0 auto;
-  background: #eee;
+  font-size: 40px;
 }
-section.mainContent .header {
+section.mainContent div.header {
   text-align: center;
 }
-section.mainContent .footer {
+section.mainContent div.content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.mainContent div.content h2 {
+  font-size: 80px;
+}
+section.mainContent div.content .contentLeft,
+section.mainContent div.content .contentRight {
+  width: 470px;
+  float: left;
+}
+section.mainContent div.footer {
+  font-size: 20px;
   text-align: center;
 }
 

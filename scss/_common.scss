@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'web-silom';
+    src: url(./silom.ttf);
+}
+
 html{
     height: 100%;
     width: 100%;
@@ -13,7 +18,7 @@ body , div , dl , dt , dd , ul , ol , li , h1 , h2 , h3 , h4 , h5 , h6 , pre , f
 body {
     height: 100%;
     width: 100%;
-    font-family: "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: "web-silom", "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
 }
 
 h1 , h2 , h3 , h4 , h5 , h6 {

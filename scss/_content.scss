@@ -1,17 +1,48 @@
 section.menuContent {
-    position: fixed;
+    font-size: 35px;
+    letter-spacing: -0.05em;
+    a {
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+    }
+    div {
+        width: 170px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        &.menuLeft {
+            @include positionType(fixed);
+            ul {
+                text-align: right;
+                padding-right: 5px;
+            }
+        }
+        &.menuRight {
+            @include positionType(fixed, 0, 1110);
+            ul {
+                padding-left: 2px;
+            }
+        }
+    }
 }
 section.mainContent {
     width: 940px;
     margin: 0 auto;
-    background: #eee;
-    .header {
+    font-size: 40px;
+    div.header {
         text-align: center;
     }
-    .content {
-
+    div.content {
+        &::after { @include clearfix(); }
+        h2 { font-size: 80px; }
+        .contentLeft,
+        .contentRight {
+            width: 470px;
+            float: left;
+        }
     }
-    .footer {
+    div.footer {
+        font-size: 20px;
         text-align: center;
     }
 }
