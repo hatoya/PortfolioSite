@@ -1,0 +1,17 @@
+section.menuContent {
+    position: fixed;
+}
+section.mainContent {
+    width: 940px;
+    margin: 0 auto;
+    background: #eee;
+    .header {
+        text-align: center;
+    }
+    .content {
+
+    }
+    .footer {
+        text-align: center;
+    }
+}

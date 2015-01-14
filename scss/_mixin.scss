@@ -1,0 +1,24 @@
+@mixin positionType($position, $top, $left) {
+    position: $position;
+    top: $top + px;
+    left: $left + px;
+}
+
+@mixin clearfix() {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@mixin animationPos($top, $left, $height: auto, $width: auto) {
+    top: $top + px;
+    left: $left + px;
+    width: $width + px;
+    height: $height + px;
+}
+
+@mixin sheepPos($top, $left) {
+    position: absolute;
+    top: $top + px;
+    left: $left + px;
+}
