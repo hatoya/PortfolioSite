@@ -89,6 +89,9 @@ section.mainContent {
 section.mainContent div.header {
   margin-top: 100px;
   text-align: center;
+  position: relative;
+  top: 50%;
+  left: 0;
 }
 section.mainContent div.content {
   margin-top: 600px;

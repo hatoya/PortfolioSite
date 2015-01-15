@@ -36,39 +36,23 @@
         <div class="header">
             <h1><img src="img/logo.png" height="494" width="491" alt="鳩屋"></h1>
         </div>
-        <div class="content">
+        <div class="content" ng-controller="contentController as content">
             <div class="contentLeft">
                 <div class="profile">
                     <h2>Profile</h2>
-                    <ul>
-                        <li>Name: Wada Hayato</li>
-                        <li>Birth: 1993/9/16</li>
-                        <li>Age: 20</li>
-                        <li>School: Nihon Uni.</li>
+                    <ul ng-repeat="profile in content.data.profile">
+                        <li>{{profile}}</li>
                     </ul>
                 </div>
                 <div class="works">
                     <h2>Works</h2>
                 </div>
             </div>
-            <div class="contentRight">
+            <div class="contentRight" ng-init="loadJSON()">
                 <div class="skills">
                     <h2>Skills</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>jQuery</li>
-                        <li>Sass</li>
-                        <li>Stylus</li>
-                        <li>Node.js</li>
-                        <li>Grunt</li>
-                        <li>gulp</li>
-                        <li>PHP</li>
-                        <li>C, C++</li>
-                        <li>Processing</li>
-                        <li>Illustrator</li>
-                        <li>Photoshop</li>
+                    <ul ng-repeat="skill in content.data.skills">
+                        <li>{{skill}}</li>
                     </ul>
                 </div>
                 <div class="contact">

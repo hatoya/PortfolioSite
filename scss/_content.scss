@@ -38,6 +38,7 @@ section.mainContent {
     div.header {
         margin-top: 100px;
         text-align: center;
+            @include positionType(relative, 50%);
     }
     div.content {
         margin-top: 600px;
