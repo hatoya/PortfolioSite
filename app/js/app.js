@@ -8,4 +8,10 @@ var hatoya;
     app.controller('contentController', function () {
         this.data = content;
     });
+    app.directive('bgAnimation', function () {
+        return {
+            restrict: "E",
+            template: ""
+        };
+    });
 })(hatoya || (hatoya = {}));

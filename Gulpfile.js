@@ -1,8 +1,9 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     sass = require('gulp-ruby-sass'),
+    ts = require('gulp-typescript'),
     plumber = require('gulp-plumber'),
-    ts = require('gulp-typescript');
+    notify = require('gulp-notify');
 
 gulp.task('connect', function(){
     connect.server({
@@ -15,7 +16,7 @@ gulp.task('connect', function(){
 gulp.task('sass', function(){
     gulp
         .src('./scss/style.scss')
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(sass({style: 'expanded'}))
         .pipe(gulp.dest('./app/css'));
 });
@@ -23,7 +24,7 @@ gulp.task('sass', function(){
 gulp.task('ts', function(){
     gulp
         .src('./ts/*.ts')
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
         .pipe(ts({module: 'amd'}))
         .pipe(gulp.dest('./app/js'));
 });

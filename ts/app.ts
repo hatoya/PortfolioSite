@@ -7,7 +7,14 @@ module hatoya {
         'skills': ['HTML', 'CSS', 'javaScript', 'jQuery', 'AngularJS','Sass', 'Grunt', 'Gulp', 'PHP', 'CakePHP', 'C, C++', 'Processing', 'openFrameworks','Illustrator', 'Photoshop']
     };
 
-    app.controller('contentController', function(){
+    app.controller('contentController', function() {
         this.data = content;
+    });
+
+    app.directive('bgAnimation', function() {
+        return {
+            restrict: "E",
+            template: ""
+        }
     });
 }
