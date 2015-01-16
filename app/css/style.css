@@ -39,6 +39,12 @@ ul {
   background: transparent;
 }
 
+section.bgAnimation {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 section.menuContent {
   font-size: 35px;
   letter-spacing: -0.05em;
@@ -94,6 +100,7 @@ section.mainContent div.header {
   left: 0;
 }
 section.mainContent div.content {
+  position: relative;
   margin-top: 600px;
 }
 section.mainContent div.content::after {
@@ -118,6 +125,7 @@ section.mainContent div.content div p {
   margin-left: 20px;
 }
 section.mainContent div.footer {
+  position: relative;
   margin-top: 100px;
   font-size: 20px;
   text-align: center;

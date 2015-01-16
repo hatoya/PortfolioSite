@@ -11,7 +11,16 @@ var hatoya;
     app.directive('bgAnimation', function () {
         return {
             restrict: "E",
-            template: ""
+            templateUrl: "../bgAnimation.html",
+            compile: function () {
+                function sizing() {
+                    $('#backCanvas').attr({ height: $(window).height() }).attr({ width: $(window).width() });
+                }
+                var canvas = document.getElementsByTagName('canvas')[0];
+                var codeElm = document.getElementById('processing-code');
+                var code = codeElm.textContent || codeElm.innerText;
+                Processing(canvas, code);
+            }
         };
     });
 })(hatoya || (hatoya = {}));
