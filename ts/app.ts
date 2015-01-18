@@ -15,16 +15,16 @@ module hatoya {
 
     app.directive('bgAnimation', function() {
         return {
-            restrict: "E",
+            restrict: "A",
             templateUrl: "../bgAnimation.html",
-            compile: function() {
+            compile: function($element) {
                 function sizing() {
-                    $('#backCanvas').attr({height:$(window).height()}).attr({width:$(window).width()});
+                    $element.attr({height:$(window).height()}).attr({width:$(window).width()});
                 }
 
-                var canvas = document.getElementsByTagName('canvas')[0];
-                var codeElm = document.getElementById('processing-code');
-                var code = codeElm.textContent || codeElm.innerText;
+                var canvas = document.getElementsByTagName('canvas')[0],
+                    codeElm = document.getElementById('processing-code'),
+                    code = codeElm.textContent || codeElm.innerText;
 
                 Processing(canvas, code);
             }
