@@ -42,14 +42,14 @@
             <div class="contentLeft">
                 <div class="profile">
                     <h2>Profile</h2>
-                    <ul ng-repeat="profile in content.data.profile">
-                        <li>{{profile}}</li>
+                    <ul>
+                        <li ng-repeat="profile in content.data.profile">{{profile}}</li>
                     </ul>
                 </div>
                 <div class="works">
                     <h2>Works</h2>
                     <div class="worksContent">
-                        <div></div>
+                        <div ng-class="animation"></div>
                         <div ng-click="content.worksAnimation($index)"></div>
                         <div></div>
                         <div></div>
@@ -65,8 +65,8 @@
             <div class="contentRight" ng-init="loadJSON()">
                 <div class="skills">
                     <h2>Skills</h2>
-                    <ul ng-repeat="skill in content.data.skills">
-                        <li>{{skill}}</li>
+                    <ul>
+                        <li ng-repeat="skill in content.data.skills">{{skill}}</li>
                     </ul>
                 </div>
                 <div class="contact">
