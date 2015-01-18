@@ -55,12 +55,47 @@ section.mainContent {
         .contentRight {
             width: 470px;
             float: left;
+            & > div {
+                margin-top: 50px;
+                ul,
+                p {
+                    margin-left: 20px;
+                }
+            }
         }
-        div {
-            margin-top: 50px;
-            ul,
-            p {
-                margin-left: 20px;
+        .works {
+            .worksContent {
+                &::after { @include clearfix(); }
+                div {
+                    height: 140px;
+                    width: 223px;
+                    float: left;
+                    margin: 8px 0 0 8px;
+                    background: rgba(0, 0, 0, 0.6);
+                    // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+                    &:nth-child(4n),
+                    &:nth-child(4n-3) {
+                        @include positionType(relative);
+                        height: 280px;
+                        width: 454px;
+                        &::before {
+                            content: "";
+                            @include positionType(absolute, 280px, 100px);
+                            border-style: solid;
+                            border-width: 7px 14px 0 14px;
+                            border-color: rgba(0, 0, 0, .6) transparent transparent transparent;
+                        }
+                    }
+                    &:nth-child(4n) {
+                        &::before {
+                            content: "";
+                            @include positionType(absolute, -7px, 330px);
+                            border-style: solid;
+                            border-width: 0 14px 7px 14px;
+                            border-color: transparent transparent rgba(0, 0, 0, .6) transparent;
+                        }
+                    }
+                }
             }
         }
     }

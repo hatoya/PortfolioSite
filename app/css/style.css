@@ -117,12 +117,52 @@ section.mainContent div.content .contentRight {
   width: 470px;
   float: left;
 }
-section.mainContent div.content div {
+section.mainContent div.content .contentLeft > div,
+section.mainContent div.content .contentRight > div {
   margin-top: 50px;
 }
-section.mainContent div.content div ul,
-section.mainContent div.content div p {
+section.mainContent div.content .contentLeft > div ul,
+section.mainContent div.content .contentLeft > div p,
+section.mainContent div.content .contentRight > div ul,
+section.mainContent div.content .contentRight > div p {
   margin-left: 20px;
+}
+section.mainContent div.content .works .worksContent::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section.mainContent div.content .works .worksContent div {
+  height: 140px;
+  width: 223px;
+  float: left;
+  margin: 8px 0 0 8px;
+  background: rgba(0, 0, 0, 0.6);
+}
+section.mainContent div.content .works .worksContent div:nth-child(4n), section.mainContent div.content .works .worksContent div:nth-child(4n-3) {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 280px;
+  width: 454px;
+}
+section.mainContent div.content .works .worksContent div:nth-child(4n)::before, section.mainContent div.content .works .worksContent div:nth-child(4n-3)::before {
+  content: "";
+  position: absolute;
+  top: 280px;
+  left: 100px;
+  border-style: solid;
+  border-width: 7px 14px 0 14px;
+  border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
+}
+section.mainContent div.content .works .worksContent div:nth-child(4n)::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 330px;
+  border-style: solid;
+  border-width: 0 14px 7px 14px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
 }
 section.mainContent div.footer {
   position: relative;

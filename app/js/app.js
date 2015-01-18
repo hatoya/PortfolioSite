@@ -7,15 +7,15 @@ var hatoya;
     };
     app.controller('contentController', function () {
         this.data = content;
+        this.worksAnimation = function (index) {
+            console.log(index);
+        };
     });
     app.directive('bgAnimation', function () {
         return {
             restrict: "A",
             templateUrl: "../bgAnimation.html",
             compile: function ($element) {
-                function sizing() {
-                    $element.attr({ height: $(window).height() }).attr({ width: $(window).width() });
-                }
                 var canvas = document.getElementsByTagName('canvas')[0], codeElm = document.getElementById('processing-code'), code = codeElm.textContent || codeElm.innerText;
                 Processing(canvas, code);
             }
