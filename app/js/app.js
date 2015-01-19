@@ -1,16 +1,14 @@
 var hatoya;
 (function (hatoya) {
-    var app = angular.module('hatoyaApp', []);
-    var content = {
-        'profile': ['Name: Wada Hayato', 'Birth: 1993/9/16', 'Age: 20', 'School: Nihon Uni.'],
-        'skills': ['HTML', 'CSS', 'javaScript', 'jQuery', 'AngularJS', 'Sass', 'Grunt', 'Gulp', 'PHP', 'CakePHP', 'C, C++', 'Processing', 'openFrameworks', 'Illustrator', 'Photoshop']
-    };
-    app.controller('contentController', function () {
-        this.data = content;
-        this.worksAnimation = function (index) {
-            console.log(index);
-        };
-    });
+    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource']);
+    app.controller('contentController', ['$scope', '$http', function ($scope, $http) {
+        $http({
+            method: 'GET',
+            url: 'js/json/hatoya.json'
+        }).success(function (data, status, headers, config) {
+            console.log(data.content);
+        });
+    }]);
     app.directive('bgAnimation', function () {
         return {
             restrict: "A",
