@@ -59,6 +59,11 @@ section.mainContent {
                 margin-top: 50px;
             }
         }
+        .profile {
+            ul {
+                margin-left: 20px;
+            }
+        }
         .works {
             ul {
                 &::after { @include clearfix(); }
@@ -109,6 +114,16 @@ section.mainContent {
                         }
                     }
                 }
+            }
+        }
+        .skills {
+            ul {
+                margin-left: 20px;
+            }
+        }
+        .contact {
+            p {
+                margin-left: 20px;
             }
         }
     }

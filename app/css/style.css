@@ -121,6 +121,9 @@ section.mainContent div.content .contentLeft > div,
 section.mainContent div.content .contentRight > div {
   margin-top: 50px;
 }
+section.mainContent div.content .profile ul {
+  margin-left: 20px;
+}
 section.mainContent div.content .works ul::after {
   content: "";
   display: block;
@@ -171,6 +174,12 @@ section.mainContent div.content .works ul li > div.after::before {
   left: 330px;
   border-width: 0 14px 7px 14px;
   border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
+}
+section.mainContent div.content .skills ul {
+  margin-left: 20px;
+}
+section.mainContent div.content .contact p {
+  margin-left: 20px;
 }
 section.mainContent div.footer {
   position: relative;
