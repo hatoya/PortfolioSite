@@ -126,19 +126,21 @@ section.mainContent div.content .works ul::after {
   display: block;
   clear: both;
 }
-section.mainContent div.content .works ul li div {
+section.mainContent div.content .works ul li > div {
   position: relative;
   top: 0;
   left: 0;
   margin: 8px 0 0 8px;
   float: left;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
   background: rgba(0, 0, 0, 0.6);
 }
-section.mainContent div.content .works ul li div.before {
+section.mainContent div.content .works ul li > div.before {
   height: 280px;
   width: 454px;
 }
-section.mainContent div.content .works ul li div.before::before {
+section.mainContent div.content .works ul li > div.before::before {
   content: "";
   position: absolute;
   top: 280px;
@@ -147,15 +149,15 @@ section.mainContent div.content .works ul li div.before::before {
   border-width: 7px 14px 0 14px;
   border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
 }
-section.mainContent div.content .works ul li div.center {
+section.mainContent div.content .works ul li > div.center {
   height: 140px;
   width: 223px;
 }
-section.mainContent div.content .works ul li div.after {
+section.mainContent div.content .works ul li > div.after {
   height: 280px;
   width: 454px;
 }
-section.mainContent div.content .works ul li div.after::before {
+section.mainContent div.content .works ul li > div.after::before {
   content: "";
   position: absolute;
   top: -7px;
@@ -163,6 +165,18 @@ section.mainContent div.content .works ul li div.after::before {
   border-style: solid;
   border-width: 0 14px 7px 14px;
   border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
+}
+section.mainContent div.content .works ul li > div div {
+  width: 215px;
+  margin-top: 8px;
+  float: left;
+  word-wrap: break-word;
+}
+section.mainContent div.content .works ul li > div .image {
+  width: 215px;
+  height: 263px;
+  margin: 8px;
+  background: rgba(0, 0, 0, 0.5);
 }
 section.mainContent div.footer {
   position: relative;

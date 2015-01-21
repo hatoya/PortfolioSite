@@ -52,9 +52,23 @@
                     <h2>Works</h2>
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
-                            <div class="before" ng-hide="{{$index % 2 == 1}}"></div>
+                            <div class="before" ng-hide="{{$index % 2 == 1}}">
+                                <div class="image"></div>
+                                <div>
+                                    <p>Project: {{works.name}}</p>
+                                    <p>Release: {{works.release}}</p>
+                                    <p>URL:{{works.url}}</p>
+                                </div>
+                            </div>
                             <div class="center"></div>
-                            <div class="after" ng-hide="{{$index % 2 == 0}}"></div>
+                            <div class="after" ng-hide="{{$index % 2 == 0}}">
+                                <div class="image"></div>
+                                <div>
+                                    <p>Project: {{works.name}}</p>
+                                    <p>Release: {{works.release}}</p>
+                                    <p>URL:{{works.url}}</p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
