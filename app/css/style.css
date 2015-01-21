@@ -142,8 +142,9 @@ section.mainContent div.content .works ul li > div {
   background: rgba(0, 0, 0, 0.6);
 }
 section.mainContent div.content .works ul li > div.before, section.mainContent div.content .works ul li > div.after {
-  height: 280px;
+  height: 0;
   width: 454px;
+  display: none;
 }
 section.mainContent div.content .works ul li > div.before::before, section.mainContent div.content .works ul li > div.after::before {
   content: "";

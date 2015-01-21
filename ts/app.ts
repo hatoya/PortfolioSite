@@ -3,16 +3,20 @@ declare var $: any;
 declare var Processing: any;
 
 module hatoya {
-    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource']);
+    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate']);
 
-    app.controller('contentController', ['$scope', '$http', function($scope, $http) {
+    app.controller('contentController', function($scope, $http) {
         $http({
-            method : 'GET',
-            url : 'js/json/hatoya.json'
+            method: 'GET',
+            url: 'js/json/hatoya.json'
         }).success(function(data, status, headers, config) {
             $scope.content = data.content;
         });
-    }]);
+
+        $scope.worksAnimation = function(index) {
+            console.log(index);
+        }
+    });
 
     app.directive('bgAnimation', function() {
         return {

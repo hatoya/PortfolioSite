@@ -79,8 +79,10 @@ section.mainContent {
                         background: rgba(0, 0, 0, 0.6);
                         &.before,
                         &.after {
-                            height: 280px;
+                            height: 0;
+                            // height: 280px;
                             width: 454px;
+                            display: none;
                             &::before {
                                 content: "";
                                 border-style: solid;

@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/angular/angular.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-route.min.js"></script>
     <script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/angular/angular-animate.min.js"></script>
     <script type="text/javascript" src="js/processing.js"></script>
     <script type="text/javascript" src="js/prefixfree.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -43,7 +44,7 @@
         <div class="content" ng-controller="contentController as content">
             <div class="contentLeft">
                 <div class="profile">
-                    <h2>Profile{{content.data.profile[0]}}</h2>
+                    <h2>Profile</h2>
                     <ul>
                         <li ng-repeat="profile in content.profile">{{profile}}</li>
                     </ul>
@@ -52,7 +53,7 @@
                     <h2>Works</h2>
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
-                            <div class="before" ng-hide="{{$index % 2 == 1}}">
+                            <div class="before {{$index}}" ng-hide="{{$index % 2 == 1}}">
                                 <div class="image"></div>
                                 <div>
                                     <p>Project: {{works.name}}</p>
@@ -60,8 +61,8 @@
                                     <p>URL:{{works.url}}</p>
                                 </div>
                             </div>
-                            <div class="center"></div>
-                            <div class="after" ng-hide="{{$index % 2 == 0}}">
+                            <div class="center" ng-click="worksAnimation($index)"></div>
+                            <div class="after {{$index}}" ng-hide="{{$index % 2 == 0}}">
                                 <div class="image"></div>
                                 <div>
                                     <p>Project: {{works.name}}</p>
