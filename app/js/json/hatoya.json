@@ -20,6 +20,53 @@
             "Processing",
             "openFrameworks","Illustrator",
             "Photoshop"
+        ],
+        "works": [
+            {
+                "name": "あいうえお",
+                "release": "20151111",
+                "url": "auiaiaiaiaiaiaaiaiai",
+                "image": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "name": "かきくけこ",
+                "release": "20151111",
+                "url": "auiaiaiaiaiaiaaiaiai",
+                "image": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "name": "さしすせそ",
+                "release": "20151111",
+                "url": "auiaiaiaiaiaiaaiaiai",
+                "image": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "name": "たちつてと",
+                "release": "20151111",
+                "url": "auiaiaiaiaiaiaaiaiai",
+                "image": [
+                    "",
+                    ""
+                ]
+            },
+            {
+                "name": "なにぬねの",
+                "release": "20151111",
+                "url": "auiaiaiaiaiaiaaiaiai",
+                "image": [
+                    "",
+                    ""
+                ]
+            }
         ]
     }
 }

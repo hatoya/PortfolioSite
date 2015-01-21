@@ -121,48 +121,65 @@ section.mainContent div.content .contentLeft > div,
 section.mainContent div.content .contentRight > div {
   margin-top: 50px;
 }
-section.mainContent div.content .contentLeft > div ul,
-section.mainContent div.content .contentLeft > div p,
-section.mainContent div.content .contentRight > div ul,
-section.mainContent div.content .contentRight > div p {
+section.mainContent div.content .profile ul {
   margin-left: 20px;
 }
-section.mainContent div.content .works .worksContent::after {
+section.mainContent div.content .works ul::after {
   content: "";
   display: block;
   clear: both;
 }
-section.mainContent div.content .works .worksContent div {
-  height: 140px;
-  width: 223px;
-  float: left;
-  margin: 8px 0 0 8px;
-  background: rgba(0, 0, 0, 0.6);
-}
-section.mainContent div.content .works .worksContent div:nth-child(4n), section.mainContent div.content .works .worksContent div:nth-child(4n-3) {
+section.mainContent div.content .works ul li > div {
   position: relative;
   top: 0;
   left: 0;
+  height: 140px;
+  width: 223px;
+  margin: 8px 0 0 8px;
+  float: left;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+section.mainContent div.content .works ul li > div.before, section.mainContent div.content .works ul li > div.after {
   height: 280px;
   width: 454px;
 }
-section.mainContent div.content .works .worksContent div:nth-child(4n)::before, section.mainContent div.content .works .worksContent div:nth-child(4n-3)::before {
+section.mainContent div.content .works ul li > div.before::before, section.mainContent div.content .works ul li > div.after::before {
   content: "";
+  border-style: solid;
+}
+section.mainContent div.content .works ul li > div.before div, section.mainContent div.content .works ul li > div.after div {
+  width: 215px;
+  margin-top: 8px;
+  float: left;
+  word-wrap: break-word;
+}
+section.mainContent div.content .works ul li > div.before div.image, section.mainContent div.content .works ul li > div.after div.image {
+  width: 215px;
+  height: 263px;
+  margin: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+section.mainContent div.content .works ul li > div.before::before {
   position: absolute;
   top: 280px;
   left: 100px;
-  border-style: solid;
   border-width: 7px 14px 0 14px;
   border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
 }
-section.mainContent div.content .works .worksContent div:nth-child(4n)::before {
-  content: "";
+section.mainContent div.content .works ul li > div.after::before {
   position: absolute;
   top: -7px;
   left: 330px;
-  border-style: solid;
   border-width: 0 14px 7px 14px;
   border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
+}
+section.mainContent div.content .skills ul {
+  margin-left: 20px;
+}
+section.mainContent div.content .contact p {
+  margin-left: 20px;
 }
 section.mainContent div.footer {
   position: relative;

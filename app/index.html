@@ -50,16 +50,27 @@
                 </div>
                 <div class="works">
                     <h2>Works</h2>
-                    <div class="worksContent">
-                        <div ng-class="animation"></div>
-                        <div ng-click="content.worksAnimation()"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                    <ul class="worksContent">
+                        <li class="worksWrapper" ng-repeat="works in content.works">
+                            <div class="before" ng-hide="{{$index % 2 == 1}}">
+                                <div class="image"></div>
+                                <div>
+                                    <p>Project: {{works.name}}</p>
+                                    <p>Release: {{works.release}}</p>
+                                    <p>URL:{{works.url}}</p>
+                                </div>
+                            </div>
+                            <div class="center"></div>
+                            <div class="after" ng-hide="{{$index % 2 == 0}}">
+                                <div class="image"></div>
+                                <div>
+                                    <p>Project: {{works.name}}</p>
+                                    <p>Release: {{works.release}}</p>
+                                    <p>URL:{{works.url}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="contentRight" ng-init="loadJSON()">
