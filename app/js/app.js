@@ -6,7 +6,7 @@ var hatoya;
             method: 'GET',
             url: 'js/json/hatoya.json'
         }).success(function (data, status, headers, config) {
-            console.log(data.content);
+            $scope.content = data.content;
         });
     }]);
     app.directive('bgAnimation', function () {
