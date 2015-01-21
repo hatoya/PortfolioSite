@@ -121,32 +121,24 @@ section.mainContent div.content .contentLeft > div,
 section.mainContent div.content .contentRight > div {
   margin-top: 50px;
 }
-section.mainContent div.content .contentLeft > div ul,
-section.mainContent div.content .contentLeft > div p,
-section.mainContent div.content .contentRight > div ul,
-section.mainContent div.content .contentRight > div p {
-  margin-left: 20px;
-}
-section.mainContent div.content .works .worksContent::after {
+section.mainContent div.content .works ul::after {
   content: "";
   display: block;
   clear: both;
 }
-section.mainContent div.content .works .worksContent div {
-  height: 140px;
-  width: 223px;
-  float: left;
-  margin: 8px 0 0 8px;
-  background: rgba(0, 0, 0, 0.6);
-}
-section.mainContent div.content .works .worksContent div:nth-child(4n), section.mainContent div.content .works .worksContent div:nth-child(4n-3) {
+section.mainContent div.content .works ul li div {
   position: relative;
   top: 0;
   left: 0;
+  margin: 8px 0 0 8px;
+  float: left;
+  background: rgba(0, 0, 0, 0.6);
+}
+section.mainContent div.content .works ul li div.before {
   height: 280px;
   width: 454px;
 }
-section.mainContent div.content .works .worksContent div:nth-child(4n)::before, section.mainContent div.content .works .worksContent div:nth-child(4n-3)::before {
+section.mainContent div.content .works ul li div.before::before {
   content: "";
   position: absolute;
   top: 280px;
@@ -155,7 +147,15 @@ section.mainContent div.content .works .worksContent div:nth-child(4n)::before, 
   border-width: 7px 14px 0 14px;
   border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
 }
-section.mainContent div.content .works .worksContent div:nth-child(4n)::before {
+section.mainContent div.content .works ul li div.center {
+  height: 140px;
+  width: 223px;
+}
+section.mainContent div.content .works ul li div.after {
+  height: 280px;
+  width: 454px;
+}
+section.mainContent div.content .works ul li div.after::before {
   content: "";
   position: absolute;
   top: -7px;
