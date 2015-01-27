@@ -10,12 +10,16 @@ section.menuContent {
         text-decoration: none;
     }
     div {
-        width: 170px;
+        width: 350px;
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
-        &.menuLeft {
+        transition: 0.5s;
+        &#menuLeft {
             @include positionType(fixed);
             box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+            &.active {
+                width: 170px;
+            }
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -90px;
@@ -23,9 +27,12 @@ section.menuContent {
                 padding-right: 5px;
             }
         }
-        &.menuRight {
-            @include positionType(fixed, 0, 1110px);
+        &#menuRight {
+            @include positionType(fixed, 0, 930px);
             box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+            &.active {
+                @include positionType(fixed, 0, 1110px);
+            }
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -67px;

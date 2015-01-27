@@ -34,4 +34,22 @@ module hatoya {
             }
         }
     });
+
+    app.directive('sideAnimation', function() {
+        return {
+            restrict: "A",
+            compile: function($element) {
+                window.onscroll = function() {
+                    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+                    if(scrollY > 400) {
+                        document.getElementById('menuLeft').classList.add('active');
+                        document.getElementById('menuRight').classList.add('active');
+                    } else {
+                        document.getElementById('menuLeft').classList.remove('active');
+                        document.getElementById('menuRight').classList.remove('active');
+                    }
+                }
+            }
+        }
+    });
 }
