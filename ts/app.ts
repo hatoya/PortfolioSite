@@ -13,8 +13,11 @@ module hatoya {
             $scope.content = data.content;
         });
 
-        $scope.worksAnimation = function(index) {
-            console.log(index);
+        $scope.active = false;
+
+        $scope.worksAnimation = function(active) {
+            if(active) return false;
+            else return true;
         }
     });
 

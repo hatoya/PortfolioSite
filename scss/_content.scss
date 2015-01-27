@@ -68,24 +68,44 @@ section.mainContent {
             ul {
                 &::after { @include clearfix(); }
                 li {
+                    &.ng-enter {
+                        opacity: 1;
+                    }
                     & > div {
                         @include positionType(relative);
                         height: 140px;
                         width: 223px;
-                        margin: 8px 0 0 8px;
+                        margin: 4px 0 4px 8px;
                         float: left;
                         color: rgba(255, 255, 255, 0.7);
                         font-size: 20px;
                         background: rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
                         &.before,
                         &.after {
-                            height: 0;
-                            // height: 280px;
+                            margin: 0 0 0 8px;
+                            height: 280px;
                             width: 454px;
-                            display: none;
+                            transition: 0.5s;
                             &::before {
                                 content: "";
                                 border-style: solid;
+                            }
+                            &.ng-enter {
+                                height: 0;
+                                opacity: 0;
+                                &.ng-enter-active {
+                                    height: 280px;
+                                    opacity: 1;
+                                }
+                            }
+                            &.ng-leave {
+                                height: 280px;
+                                opacity: 1;
+                                &.ng-leave-active {
+                                    height: 0;
+                                    opacity: 0;
+                                }
                             }
                             div {
                                 width: 215px;
@@ -104,14 +124,14 @@ section.mainContent {
                             &::before {
                                 @include positionType(absolute, 280px, 100px);
                                 border-width: 7px 14px 0 14px;
-                                border-color: rgba(0, 0, 0, .6) transparent transparent transparent;
+                                border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
                             }
                         }
                         &.after {
                             &::before {
                                 @include positionType(absolute, -7px, 330px);
                                 border-width: 0 14px 7px 14px;
-                                border-color: transparent transparent rgba(0, 0, 0, .6) transparent;
+                                border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
                             }
                         }
                     }

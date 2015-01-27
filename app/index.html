@@ -53,7 +53,7 @@
                     <h2>Works</h2>
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
-                            <div class="before {{$index}}" ng-hide="{{$index % 2 == 1}}">
+                            <div class="before" ng-if="$index % 2 == 0 && active">
                                 <div class="image"></div>
                                 <div>
                                     <p>Project: {{works.name}}</p>
@@ -61,8 +61,8 @@
                                     <p>URL:{{works.url}}</p>
                                 </div>
                             </div>
-                            <div class="center" ng-click="worksAnimation($index)"></div>
-                            <div class="after {{$index}}" ng-hide="{{$index % 2 == 0}}">
+                            <div class="center" ng-click="active = worksAnimation(active)"></div>
+                            <div class="after" ng-if="$index % 2 == 1 && active">
                                 <div class="image"></div>
                                 <div>
                                     <p>Project: {{works.name}}</p>
