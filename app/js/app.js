@@ -20,7 +20,7 @@ var hatoya;
         return {
             restrict: "A",
             templateUrl: "../bgAnimation.html",
-            compile: function ($element) {
+            compile: function () {
                 var canvas = document.getElementsByTagName('canvas')[0], codeElm = document.getElementById('processing-code'), code = codeElm.textContent || codeElm.innerText;
                 Processing(canvas, code);
             }
@@ -29,7 +29,7 @@ var hatoya;
     app.directive('sideAnimation', function () {
         return {
             restrict: "A",
-            compile: function ($element) {
+            compile: function () {
                 window.onscroll = function () {
                     var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
                     if (scrollY > 400) {
