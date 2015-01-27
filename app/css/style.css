@@ -46,8 +46,10 @@ section.bgAnimation {
 }
 
 section.menuContent {
+  position: relative;
   font-size: 35px;
   letter-spacing: -0.05em;
+  z-index: 10;
 }
 section.menuContent a {
   color: rgba(255, 255, 255, 0.7);

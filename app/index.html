@@ -23,17 +23,17 @@
     <section class="menuContent" side-animation>
         <div id="menuLeft">
             <ul>
-                <li><a href="">Profile</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#profileContent">Profile</a></li>
+                <li><a href="#skillsContent">Skills</a></li>
+                <li><a href="#worksContent">Works</a></li>
+                <li><a href="#contactContent">Contact</a></li>
             </ul>
         </div>
         <div id="menuRight">
             <ul>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">GitHub</a></li>
+                <li><a href="https://twitter.com/CheeseHayato">Twitter</a></li>
+                <li><a href="https://www.facebook.com/hayato.wada.79">Facebook</a></li>
+                <li><a href="https://github.com/hatoya">GitHub</a></li>
             </ul>
         </div>
     </section>
@@ -43,13 +43,13 @@
         </div>
         <div class="content" ng-controller="contentController as content">
             <div class="contentLeft">
-                <div class="profile">
+                <div class="profile" id="profileContent">
                     <h2>Profile</h2>
                     <ul>
                         <li ng-repeat="profile in content.profile">{{profile}}</li>
                     </ul>
                 </div>
-                <div class="works">
+                <div class="works" id="worksContent">
                     <h2>Works</h2>
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
@@ -75,13 +75,13 @@
                 </div>
             </div>
             <div class="contentRight" ng-init="loadJSON()">
-                <div class="skills">
+                <div class="skills" id="skillsContent">
                     <h2>Skills</h2>
                     <ul>
                         <li ng-repeat="skills in content.skills">{{skills}}</li>
                     </ul>
                 </div>
-                <div class="contact">
+                <div class="contact" id="contactContent">
                     <h2>Contact</h2>
                     <p><a href="mailto:hatoya.web.design@gmail.com">Send a mail.</a></p>
                 </div>
