@@ -10,12 +10,16 @@ section.menuContent {
         text-decoration: none;
     }
     div {
-        width: 170px;
+        width: 350px;
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
-        &.menuLeft {
+        transition: 0.5s;
+        &#menuLeft {
             @include positionType(fixed);
             box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+            &.active {
+                width: 170px;
+            }
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -90px;
@@ -23,9 +27,12 @@ section.menuContent {
                 padding-right: 5px;
             }
         }
-        &.menuRight {
-            @include positionType(fixed, 0, 1110px);
+        &#menuRight {
+            @include positionType(fixed, 0, 930px);
             box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+            &.active {
+                @include positionType(fixed, 0, 1110px);
+            }
             ul {
                 @include positionType(relative, 50%);
                 margin-top: -67px;
@@ -68,22 +75,44 @@ section.mainContent {
             ul {
                 &::after { @include clearfix(); }
                 li {
+                    &.ng-enter {
+                        opacity: 1;
+                    }
                     & > div {
                         @include positionType(relative);
                         height: 140px;
                         width: 223px;
-                        margin: 8px 0 0 8px;
+                        margin: 4px 0 4px 8px;
                         float: left;
                         color: rgba(255, 255, 255, 0.7);
                         font-size: 20px;
                         background: rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
                         &.before,
                         &.after {
+                            margin: 0 0 0 8px;
                             height: 280px;
                             width: 454px;
+                            transition: 0.5s;
                             &::before {
                                 content: "";
                                 border-style: solid;
+                            }
+                            &.ng-enter {
+                                height: 0;
+                                opacity: 0;
+                                &.ng-enter-active {
+                                    height: 280px;
+                                    opacity: 1;
+                                }
+                            }
+                            &.ng-leave {
+                                height: 280px;
+                                opacity: 1;
+                                &.ng-leave-active {
+                                    height: 0;
+                                    opacity: 0;
+                                }
                             }
                             div {
                                 width: 215px;
@@ -102,14 +131,14 @@ section.mainContent {
                             &::before {
                                 @include positionType(absolute, 280px, 100px);
                                 border-width: 7px 14px 0 14px;
-                                border-color: rgba(0, 0, 0, .6) transparent transparent transparent;
+                                border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
                             }
                         }
                         &.after {
                             &::before {
                                 @include positionType(absolute, -7px, 330px);
                                 border-width: 0 14px 7px 14px;
-                                border-color: transparent transparent rgba(0, 0, 0, .6) transparent;
+                                border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
                             }
                         }
                     }

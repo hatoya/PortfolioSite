@@ -55,17 +55,21 @@ section.menuContent a {
   text-decoration: none;
 }
 section.menuContent div {
-  width: 170px;
+  width: 350px;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
 }
-section.menuContent div.menuLeft {
+section.menuContent div#menuLeft {
   position: fixed;
   top: 0;
   left: 0;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
-section.menuContent div.menuLeft ul {
+section.menuContent div#menuLeft.active {
+  width: 170px;
+}
+section.menuContent div#menuLeft ul {
   position: relative;
   top: 50%;
   left: 0;
@@ -73,13 +77,18 @@ section.menuContent div.menuLeft ul {
   text-align: right;
   padding-right: 5px;
 }
-section.menuContent div.menuRight {
+section.menuContent div#menuRight {
+  position: fixed;
+  top: 0;
+  left: 930px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+}
+section.menuContent div#menuRight.active {
   position: fixed;
   top: 0;
   left: 1110px;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 }
-section.menuContent div.menuRight ul {
+section.menuContent div#menuRight ul {
   position: relative;
   top: 50%;
   left: 0;
@@ -129,25 +138,47 @@ section.mainContent div.content .works ul::after {
   display: block;
   clear: both;
 }
+section.mainContent div.content .works ul li.ng-enter {
+  opacity: 1;
+}
 section.mainContent div.content .works ul li > div {
   position: relative;
   top: 0;
   left: 0;
   height: 140px;
   width: 223px;
-  margin: 8px 0 0 8px;
+  margin: 4px 0 4px 8px;
   float: left;
   color: rgba(255, 255, 255, 0.7);
   font-size: 20px;
   background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 section.mainContent div.content .works ul li > div.before, section.mainContent div.content .works ul li > div.after {
+  margin: 0 0 0 8px;
   height: 280px;
   width: 454px;
+  transition: 0.5s;
 }
 section.mainContent div.content .works ul li > div.before::before, section.mainContent div.content .works ul li > div.after::before {
   content: "";
   border-style: solid;
+}
+section.mainContent div.content .works ul li > div.before.ng-enter, section.mainContent div.content .works ul li > div.after.ng-enter {
+  height: 0;
+  opacity: 0;
+}
+section.mainContent div.content .works ul li > div.before.ng-enter.ng-enter-active, section.mainContent div.content .works ul li > div.after.ng-enter.ng-enter-active {
+  height: 280px;
+  opacity: 1;
+}
+section.mainContent div.content .works ul li > div.before.ng-leave, section.mainContent div.content .works ul li > div.after.ng-leave {
+  height: 280px;
+  opacity: 1;
+}
+section.mainContent div.content .works ul li > div.before.ng-leave.ng-leave-active, section.mainContent div.content .works ul li > div.after.ng-leave.ng-leave-active {
+  height: 0;
+  opacity: 0;
 }
 section.mainContent div.content .works ul li > div.before div, section.mainContent div.content .works ul li > div.after div {
   width: 215px;
