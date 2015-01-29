@@ -62,16 +62,16 @@ section.menuContent div {
   background: rgba(0, 0, 0, 0.6);
   transition: 0.5s;
 }
-section.menuContent div#menuLeft {
+section.menuContent div.menuLeft {
   position: fixed;
   top: 0;
   left: 0;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
-section.menuContent div#menuLeft.active {
+section.menuContent div.menuLeft.active {
   width: 170px;
 }
-section.menuContent div#menuLeft ul {
+section.menuContent div.menuLeft ul {
   position: relative;
   top: 50%;
   left: 0;
@@ -79,18 +79,18 @@ section.menuContent div#menuLeft ul {
   text-align: right;
   padding-right: 5px;
 }
-section.menuContent div#menuRight {
+section.menuContent div.menuRight {
   position: fixed;
   top: 0;
   left: 930px;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 }
-section.menuContent div#menuRight.active {
+section.menuContent div.menuRight.active {
   position: fixed;
   top: 0;
   left: 1110px;
 }
-section.menuContent div#menuRight ul {
+section.menuContent div.menuRight ul {
   position: relative;
   top: 50%;
   left: 0;
@@ -210,6 +210,9 @@ section.mainContent div.content .works ul li > div.before > div.button, section.
   box-sizing: border-box;
   border: solid 3px rgba(255, 255, 255, 0.7);
   cursor: pointer;
+}
+section.mainContent div.content .works ul li > div.before > div.button:active, section.mainContent div.content .works ul li > div.after > div.button:active {
+  margin-top: 10px;
 }
 section.mainContent div.content .works ul li > div.before > div p:nth-child(2n), section.mainContent div.content .works ul li > div.after > div p:nth-child(2n) {
   margin-bottom: 10px;

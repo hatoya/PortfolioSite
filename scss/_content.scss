@@ -16,7 +16,7 @@ section.menuContent {
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
         transition: 0.5s;
-        &#menuLeft {
+        &.menuLeft {
             @include positionType(fixed);
             box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
             &.active {
@@ -29,7 +29,7 @@ section.menuContent {
                 padding-right: 5px;
             }
         }
-        &#menuRight {
+        &.menuRight {
             @include positionType(fixed, 0, 930px);
             box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
             &.active {
@@ -141,6 +141,9 @@ section.mainContent {
                                     box-sizing: border-box;
                                     border: solid 3px rgba(255, 255, 255, 0.7);
                                     cursor: pointer;
+                                    &:active {
+                                        margin-top: 10px;
+                                    }
                                 }
                                 p:nth-child(2n) {
                                     margin-bottom: 10px;
