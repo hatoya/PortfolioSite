@@ -154,12 +154,14 @@ section.mainContent div.content .works ul li > div {
   color: rgba(255, 255, 255, 0.7);
   font-size: 20px;
   background: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
 }
 section.mainContent div.content .works ul li > div.space {
   height: 8px;
   width: 100%;
   background: none;
+}
+section.mainContent div.content .works ul li > div.center {
+  cursor: pointer;
 }
 section.mainContent div.content .works ul li > div.before, section.mainContent div.content .works ul li > div.after {
   margin-left: 8px;
@@ -187,17 +189,33 @@ section.mainContent div.content .works ul li > div.before.ng-leave.ng-leave-acti
   height: 0;
   opacity: 0;
 }
-section.mainContent div.content .works ul li > div.before div, section.mainContent div.content .works ul li > div.after div {
+section.mainContent div.content .works ul li > div.before > div, section.mainContent div.content .works ul li > div.after > div {
   width: 215px;
   margin-top: 8px;
   float: left;
   word-wrap: break-word;
 }
-section.mainContent div.content .works ul li > div.before div.image, section.mainContent div.content .works ul li > div.after div.image {
+section.mainContent div.content .works ul li > div.before > div.image, section.mainContent div.content .works ul li > div.after > div.image {
   width: 215px;
   height: 263px;
   margin: 8px;
   background: rgba(0, 0, 0, 0.5);
+}
+section.mainContent div.content .works ul li > div.before > div.button, section.mainContent div.content .works ul li > div.after > div.button {
+  width: 22%;
+  margin-right: 11px;
+  float: left;
+  line-height: 35px;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid 3px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+section.mainContent div.content .works ul li > div.before > div p:nth-child(2n), section.mainContent div.content .works ul li > div.after > div p:nth-child(2n) {
+  margin-bottom: 10px;
+}
+section.mainContent div.content .works ul li > div.before > div p:nth-child(2n-1), section.mainContent div.content .works ul li > div.after > div p:nth-child(2n-1) {
+  font-size: 15px;
 }
 section.mainContent div.content .works ul li > div.before::before {
   position: absolute;

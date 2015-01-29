@@ -56,10 +56,13 @@
                             <div class="before" ng-if="$index % 2 == 0 && active">
                                 <div class="image"></div>
                                 <div>
-                                    <p>Project: {{works.name}}</p>
-                                    <p>Release: {{works.release}}</p>
-                                    <p>URL:{{works.url}}</p>
+                                    <p>ProjectName</p>
+                                    <p>{{works.name}}</p>
+                                    <p>Release</p>
+                                    <p>{{works.release}}</p>
                                 </div>
+                                <div class="button" ng-click="worksJump(works.github)" ng-if="works.github">GitHub</div>
+                                <div class="button" ng-click="worksJump(works.url)" ng-if="works.url">Launch</div>
                             </div>
                             <div class="space" ng-if="$index % 2 == 0 && active"></div>
                             <div class="center" ng-click="active = worksAnimation(active)"></div>
@@ -67,10 +70,13 @@
                             <div class="after" ng-if="$index % 2 == 1 && active">
                                 <div class="image"></div>
                                 <div>
-                                    <p>Project: {{works.name}}</p>
-                                    <p>Release: {{works.release}}</p>
-                                    <p>URL:{{works.url}}</p>
+                                    <p>ProjectName</p>
+                                    <p>{{works.name}}</p>
+                                    <p>Release</p>
+                                    <p>{{works.release}}</p>
                                 </div>
+                                <div class="button" ng-click="worksJump(works.github)" ng-if="works.github">GitHub</div>
+                                <div class="button" ng-click="worksJump(works.url)" ng-if="works.url">Launch</div>
                             </div>
                             <div class="space" ng-if="$index % 2 == 1 && active"></div>
                         </li>

@@ -89,12 +89,12 @@ section.mainContent {
                         color: rgba(255, 255, 255, 0.7);
                         font-size: 20px;
                         background: rgba(0, 0, 0, 0.6);
-                        cursor: pointer;
                         &.space {
                             height: 8px;
                             width: 100%;
                             background: none;
                         }
+                        &.center { cursor: pointer; }
                         &.before,
                         &.after {
                             margin-left: 8px;
@@ -121,7 +121,7 @@ section.mainContent {
                                     opacity: 0;
                                 }
                             }
-                            div {
+                            & > div {
                                 width: 215px;
                                 margin-top: 8px;
                                 float: left;
@@ -131,6 +131,22 @@ section.mainContent {
                                     height: 263px;
                                     margin: 8px;
                                     background: rgba(0, 0, 0, 0.5);
+                                }
+                                &.button {
+                                    width: 22%;
+                                    margin-right: 11px;
+                                    float: left;
+                                    line-height: 35px;
+                                    text-align: center;
+                                    box-sizing: border-box;
+                                    border: solid 3px rgba(255, 255, 255, 0.7);
+                                    cursor: pointer;
+                                }
+                                p:nth-child(2n) {
+                                    margin-bottom: 10px;
+                                }
+                                p:nth-child(2n-1) {
+                                    font-size: 15px;
                                 }
                             }
                         }
