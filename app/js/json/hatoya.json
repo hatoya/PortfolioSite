@@ -9,16 +9,19 @@
         "skills": [
             "HTML",
             "CSS",
-            "javaScript",
+            "JavaScript",
             "jQuery",
-            "AngularJS","Sass",
+            "Backbone.js",
+            "AngularJS",
+            "Sass",
             "Grunt",
             "Gulp",
             "PHP",
             "CakePHP",
             "C, C++",
             "Processing",
-            "openFrameworks","Illustrator",
+            "openFrameworks",
+            "Illustrator",
             "Photoshop"
         ],
         "works": [
@@ -29,8 +32,8 @@
                 "url": "http://its-on.jp.net/",
                 "github": "https://github.com/hatoya/its-on",
                 "image": [
-                    "",
-                    ""
+                    "img/itson1.png",
+                    "img/itson2.png"
                 ]
             },
             {
@@ -40,8 +43,8 @@
                 "url": "http://hatoya.me/LoadingAnimation/",
                 "github": "https://github.com/hatoya/cssAnimation",
                 "image": [
-                    "",
-                    ""
+                    "img/loading1.png",
+                    "img/loading2.png"
                 ]
             },
             {
@@ -51,8 +54,8 @@
                 "url": "http://hatoya.me/FireChat/",
                 "github": "https://github.com/hatoya/FireChat",
                 "image": [
-                    "",
-                    ""
+                    "img/fire1.png",
+                    "img/fire2.png"
                 ]
             },
             {
@@ -62,8 +65,8 @@
                 "url": "http://hatoya.me/NewYear/",
                 "github": "https://github.com/hatoya/NewYear",
                 "image": [
-                    "",
-                    ""
+                    "img/newyear1.png",
+                    "img/newyear2.png"
                 ]
             }
         ]
