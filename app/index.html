@@ -61,7 +61,9 @@
                                     <p>URL:{{works.url}}</p>
                                 </div>
                             </div>
+                            <div class="space" ng-if="$index % 2 == 0 && active"></div>
                             <div class="center" ng-click="active = worksAnimation(active)"></div>
+                            <div class="space" ng-if="$index % 2 == 1"></div>
                             <div class="after" ng-if="$index % 2 == 1 && active">
                                 <div class="image"></div>
                                 <div>
@@ -70,6 +72,7 @@
                                     <p>URL:{{works.url}}</p>
                                 </div>
                             </div>
+                            <div class="space" ng-if="$index % 2 == 1 && active"></div>
                         </li>
                     </ul>
                 </div>
