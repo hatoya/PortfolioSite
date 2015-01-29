@@ -21,7 +21,7 @@
 <body ng-app="hatoyaApp">
     <section class="bgAnimation" bg-animation></section>
     <section class="menuContent" side-animation>
-        <div id="menuLeft">
+        <div id="menuLeft" class="menuLeft">
             <ul>
                 <li><a href="#profileContent">Profile</a></li>
                 <li><a href="#skillsContent">Skills</a></li>
@@ -29,7 +29,7 @@
                 <li><a href="#contactContent">Contact</a></li>
             </ul>
         </div>
-        <div id="menuRight">
+        <div id="menuRight" class="menuRight">
             <ul>
                 <li><a href="https://twitter.com/CheeseHayato">Twitter</a></li>
                 <li><a href="https://www.facebook.com/hayato.wada.79">Facebook</a></li>
@@ -54,22 +54,33 @@
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
                             <div class="before" ng-if="$index % 2 == 0 && active">
-                                <div class="image"></div>
+                                <div class="image"><img ng-src="{{works.image[1]}}" alt=""></div>
                                 <div>
-                                    <p>Project: {{works.name}}</p>
-                                    <p>Release: {{works.release}}</p>
-                                    <p>URL:{{works.url}}</p>
+                                    <p>ProjectName</p>
+                                    <p>{{works.name}}</p>
+                                    <p>Release</p>
+                                    <p>{{works.release}}</p>
                                 </div>
+                                <div class="button" ng-click="worksJump(works.github)" ng-if="works.github">GitHub</div>
+                                <div class="button" ng-click="worksJump(works.url)" ng-if="works.url">Launch</div>
                             </div>
-                            <div class="center" ng-click="active = worksAnimation(active)"></div>
+                            <div class="space" ng-if="$index % 2 == 0 && active"></div>
+                            <div class="center" ng-click="active = worksAnimation(active)">
+                                <img ng-src="{{works.image[0]}}" alt="">
+                            </div>
+                            <div class="space" ng-if="$index % 2 == 1"></div>
                             <div class="after" ng-if="$index % 2 == 1 && active">
-                                <div class="image"></div>
+                                <div class="image"><img ng-src="{{works.image[1]}}" alt=""></div>
                                 <div>
-                                    <p>Project: {{works.name}}</p>
-                                    <p>Release: {{works.release}}</p>
-                                    <p>URL:{{works.url}}</p>
+                                    <p>ProjectName</p>
+                                    <p>{{works.name}}</p>
+                                    <p>Release</p>
+                                    <p>{{works.release}}</p>
                                 </div>
+                                <div class="button" ng-click="worksJump(works.github)" ng-if="works.github">GitHub</div>
+                                <div class="button" ng-click="worksJump(works.url)" ng-if="works.url">Launch</div>
                             </div>
+                            <div class="space" ng-if="$index % 2 == 1 && active"></div>
                         </li>
                     </ul>
                 </div>
