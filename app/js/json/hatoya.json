@@ -23,45 +23,44 @@
         ],
         "works": [
             {
-                "name": "あいうえお",
-                "release": "20151111",
-                "url": "auiaiaiaiaiaiaaiaiai",
+                "name": "It's on!",
+                "release": "2014/04/01",
+                "description": "日本大学の文理学部、商学部合同サークル「It's on」の公式サイトを制作しました。",
+                "url": "http://its-on.jp.net/",
+                "github": "https://github.com/hatoya/its-on",
                 "image": [
                     "",
                     ""
                 ]
             },
             {
-                "name": "かきくけこ",
-                "release": "20151111",
-                "url": "auiaiaiaiaiaiaaiaiai",
+                "name": "LoadingAnimation",
+                "release": "2014/09/10",
+                "description": "CSS3のAnimationを使いLoadingAnimationを実装してみました。",
+                "url": "http://hatoya.me/LoadingAnimation/",
+                "github": "https://github.com/hatoya/cssAnimation",
                 "image": [
                     "",
                     ""
                 ]
             },
             {
-                "name": "さしすせそ",
-                "release": "20151111",
-                "url": "auiaiaiaiaiaiaaiaiai",
+                "name": "FireChat",
+                "release": "2014/10/12",
+                "description": "Firebaseを使い実験的に非同期通信でチャットアプリケーションを作ってみました。",
+                "url": "http://hatoya.me/FireChat/",
+                "github": "https://github.com/hatoya/FireChat",
                 "image": [
                     "",
                     ""
                 ]
             },
             {
-                "name": "たちつてと",
-                "release": "20151111",
-                "url": "auiaiaiaiaiaiaaiaiai",
-                "image": [
-                    "",
-                    ""
-                ]
-            },
-            {
-                "name": "なにぬねの",
-                "release": "20151111",
-                "url": "auiaiaiaiaiaiaaiaiai",
+                "name": "NewYear!",
+                "release": "2015/01/01",
+                "description": "2015年元日のグリーティングサイトです。",
+                "url": "http://hatoya.me/NewYear/",
+                "github": "https://github.com/hatoya/NewYear",
                 "image": [
                     "",
                     ""
