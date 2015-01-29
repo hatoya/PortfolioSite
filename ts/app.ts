@@ -14,10 +14,13 @@ module hatoya {
         });
 
         $scope.active = false;
-
         $scope.worksAnimation = function(active) {
             if(active) return false;
             else return true;
+        }
+
+        $scope.worksJump = function(url) {
+            location.href = url;
         }
     });
 

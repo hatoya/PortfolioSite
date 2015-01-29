@@ -15,6 +15,9 @@ var hatoya;
             else
                 return true;
         };
+        $scope.worksJump = function (url) {
+            location.href = url;
+        };
     });
     app.directive('bgAnimation', function () {
         return {
