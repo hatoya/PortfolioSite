@@ -30,10 +30,12 @@ section.menuContent {
             }
         }
         &.menuRight {
-            @include positionType(fixed, 0, 930px);
+            position: fixed;
+            top: 0;
+            right: 0;
             box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
             &.active {
-                @include positionType(fixed, 0, 1110px);
+                right: -170px;
             }
             ul {
                 @include positionType(relative, 50%);
