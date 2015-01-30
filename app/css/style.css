@@ -82,13 +82,11 @@ section.menuContent div.menuLeft ul {
 section.menuContent div.menuRight {
   position: fixed;
   top: 0;
-  left: 930px;
+  right: 0;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
 }
 section.menuContent div.menuRight.active {
-  position: fixed;
-  top: 0;
-  left: 1110px;
+  right: -170px;
 }
 section.menuContent div.menuRight ul {
   position: relative;
