@@ -3,13 +3,14 @@ declare var $: any;
 declare var Processing: any;
 
 module hatoya {
-    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate']);
+    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate', 'duScroll']);
 
-    app.controller('menuController', function($scope) {
+    app.controller('menuController', function($scope, $document) {
         $scope.menuContents = ['Profile', 'Skills', 'Works', 'Contact'];
 
-        $scope.linkJump = function($event, index) {
-
+        $scope.linkJump = function(index) {
+            var contentsTop = 1000;
+            $document.scrollTopAnimated(contentsTop, 1000);
         }
     });
 
