@@ -5,6 +5,14 @@ declare var Processing: any;
 module hatoya {
     var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate']);
 
+    app.controller('menuController', function($scope) {
+        $scope.menuContents = ['Profile', 'Skills', 'Works', 'Contact'];
+
+        $scope.linkJump = function($event, index) {
+
+        }
+    });
+
     app.controller('contentController', function($scope, $http) {
         $http({
             method: 'GET',

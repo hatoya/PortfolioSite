@@ -27,6 +27,12 @@ section.menuContent {
                 margin-top: -90px;
                 text-align: right;
                 padding-right: 5px;
+                li {
+                    color: rgba(255, 255, 255, 0.7);
+                    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             }
         }
         &.menuRight {

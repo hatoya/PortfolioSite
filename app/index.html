@@ -20,13 +20,10 @@
 </head>
 <body ng-app="hatoyaApp">
     <section class="bgAnimation" bg-animation></section>
-    <section class="menuContent" side-animation>
+    <section class="menuContent" ng-controller="menuController" side-animation>
         <div id="menuLeft" class="menuLeft">
             <ul>
-                <li><a href="#profileContent">Profile</a></li>
-                <li><a href="#skillsContent">Skills</a></li>
-                <li><a href="#worksContent">Works</a></li>
-                <li><a href="#contactContent">Contact</a></li>
+                <li ng-click="linkJump($index)" ng-repeat="menu in menuContents">{{menu}}</li>
             </ul>
         </div>
         <div id="menuRight" class="menuRight">
