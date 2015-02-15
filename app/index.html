@@ -41,13 +41,13 @@
         </div>
         <div class="content" ng-controller="contentController as content">
             <div class="contentLeft">
-                <div class="profile" id="profileContent">
+                <div class="profile" id="contents0">
                     <h2>Profile</h2>
                     <ul>
                         <li ng-repeat="profile in content.profile">{{profile}}</li>
                     </ul>
                 </div>
-                <div class="works" id="worksContent">
+                <div class="works" id="contents2">
                     <h2>Works</h2>
                     <ul class="worksContent">
                         <li class="worksWrapper" ng-repeat="works in content.works">
@@ -84,13 +84,13 @@
                 </div>
             </div>
             <div class="contentRight" ng-init="loadJSON()">
-                <div class="skills" id="skillsContent">
+                <div class="skills" id="contents1">
                     <h2>Skills</h2>
                     <ul>
                         <li ng-repeat="skills in content.skills">{{skills}}</li>
                     </ul>
                 </div>
-                <div class="contact" id="contactContent">
+                <div class="contact" id="contents3">
                     <h2>Contact</h2>
                     <p><a href="mailto:hatoya.web.design@gmail.com">Send a mail.</a></p>
                 </div>

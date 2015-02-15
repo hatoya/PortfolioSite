@@ -4,8 +4,8 @@ var hatoya;
     app.controller('menuController', function ($scope, $document) {
         $scope.menuContents = ['Profile', 'Skills', 'Works', 'Contact'];
         $scope.linkJump = function (index) {
-            var contentsTop = 1000;
-            $document.scrollTopAnimated(contentsTop, 1000);
+            var contentsTop = document.getElementById('contents' + index).getBoundingClientRect().top, scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+            $document.scrollTopAnimated(contentsTop + scrollY, 1000);
         };
     });
     app.controller('contentController', function ($scope, $http) {
