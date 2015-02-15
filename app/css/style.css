@@ -55,6 +55,10 @@ section.menuContent a {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   text-decoration: none;
+  transition: 0.5s;
+}
+section.menuContent a:hover {
+  opacity: 0.7;
 }
 section.menuContent div {
   width: 350px;
@@ -78,6 +82,16 @@ section.menuContent div.menuLeft ul {
   margin-top: -90px;
   text-align: right;
   padding-right: 5px;
+}
+section.menuContent div.menuLeft ul li {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section.menuContent div.menuLeft ul li:hover {
+  opacity: 0.7;
 }
 section.menuContent div.menuRight {
   position: fixed;

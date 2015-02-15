@@ -1,6 +1,13 @@
 var hatoya;
 (function (hatoya) {
-    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate']);
+    var app = angular.module('hatoyaApp', ['ngRoute', 'ngResource', 'ngAnimate', 'duScroll']);
+    app.controller('menuController', function ($scope, $document) {
+        $scope.menuContents = ['Profile', 'Skills', 'Works', 'Contact'];
+        $scope.linkJump = function (index) {
+            var contentsTop = document.getElementById('contents' + index).getBoundingClientRect().top, scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+            $document.scrollTopAnimated(contentsTop + scrollY, 1000);
+        };
+    });
     app.controller('contentController', function ($scope, $http) {
         $http({
             method: 'GET',
