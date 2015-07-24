@@ -11,7 +11,7 @@ var hatoya;
     app.controller('contentController', function ($scope, $http) {
         $http({
             method: 'GET',
-            url: 'js/json/hatoya.json'
+            url: '/js/json/hatoya.json'
         }).success(function (data, status, headers, config) {
             $scope.content = data.content;
         });
@@ -29,7 +29,7 @@ var hatoya;
     app.directive('bgAnimation', function () {
         return {
             restrict: "A",
-            templateUrl: "../bgAnimation.html",
+            templateUrl: "/bgAnimation.html",
             compile: function () {
                 var canvas = document.getElementsByTagName('canvas')[0], codeElm = document.getElementById('processing-code'), code = codeElm.textContent || codeElm.innerText;
                 Processing(canvas, code);
