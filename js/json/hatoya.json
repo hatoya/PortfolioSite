@@ -1,11 +1,5 @@
 {
     "content": {
-        "profile": [
-            "Name: Wada Hayato",
-            "Birth: 1993/9/16",
-            "Age: 20",
-            "School: Nihon Uni."
-        ],
         "skills": [
             "HTML",
             "CSS",
@@ -26,21 +20,10 @@
         ],
         "works": [
             {
-                "name": "It's on!",
-                "release": "2014/04/01",
-                "description": "日本大学の文理学部、商学部合同サークル「It's on」の公式サイトを制作しました。",
-                "url": "http://its-on.jp.net/",
-                "github": "https://github.com/hatoya/its-on",
-                "image": [
-                    "img/itson1.png",
-                    "img/itson2.png"
-                ]
-            },
-            {
                 "name": "LoadingAnimation",
                 "release": "2014/09/10",
                 "description": "CSS3のAnimationを使いLoadingAnimationを実装してみました。",
-                "url": "http://hatoya.me/LoadingAnimation/",
+                "url": "",
                 "github": "https://github.com/hatoya/cssAnimation",
                 "image": [
                     "img/loading1.png",
@@ -51,7 +34,7 @@
                 "name": "FireChat",
                 "release": "2014/10/12",
                 "description": "Firebaseを使い実験的に非同期通信でチャットアプリケーションを作ってみました。",
-                "url": "http://hatoya.me/FireChat/",
+                "url": "",
                 "github": "https://github.com/hatoya/FireChat",
                 "image": [
                     "img/fire1.png",
@@ -62,7 +45,7 @@
                 "name": "NewYear!",
                 "release": "2015/01/01",
                 "description": "2015年元日のグリーティングサイトです。",
-                "url": "http://hatoya.me/NewYear/",
+                "url": "",
                 "github": "https://github.com/hatoya/NewYear",
                 "image": [
                     "img/newyear1.png",
